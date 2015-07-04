@@ -45,7 +45,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-11798' class='srclink' href='../src/qrcode/lib.rs.html#39-44' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-11585' class='srclink' href='../src/qrcode/lib.rs.html#39-44' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct QrCode {
     // some fields omitted
 }</pre><div class='docblock'><p>The encoded QR code symbol.</p>
@@ -54,7 +54,7 @@
 
 <p>This method uses the &quot;medium&quot; error correction level and automatically
 chooses the smallest QR code.</p>
-<pre class='rust rust-example-rendered'>
+<pre id='rust-example-rendered' class='rust '>
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::<span class='ident'>QrCode</span>;
 
 <span class='kw'>let</span> <span class='ident'>code</span> <span class='op'>=</span> <span class='ident'>QrCode</span>::<span class='ident'>new</span>(<span class='string'>b&quot;Some data&quot;</span>).<span class='ident'>unwrap</span>();
@@ -64,7 +64,7 @@ chooses the smallest QR code.</p>
 specific error correction level.</p>
 
 <p>This method automatically chooses the smallest QR code.</p>
-<pre class='rust rust-example-rendered'>
+<pre id='rust-example-rendered' class='rust '>
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::{<span class='ident'>QrCode</span>, <span class='ident'>EcLevel</span>};
 
 <span class='kw'>let</span> <span class='ident'>code</span> <span class='op'>=</span> <span class='ident'>QrCode</span>::<span class='ident'>with_error_correction_level</span>(<span class='string'>b&quot;Some data&quot;</span>, <span class='ident'>EcLevel</span>::<span class='ident'>H</span>).<span class='ident'>unwrap</span>();
@@ -72,14 +72,14 @@ specific error correction level.</p>
 </div><h4 id='method.with_version' class='method'><code>fn <a href='#method.with_version' class='fnname'>with_version</a>(data: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a href='http://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a><a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>, version: <a class='enum' href='../qrcode/types/enum.Version.html' title='qrcode::types::Version'>Version</a>, ec_level: <a class='enum' href='../qrcode/types/enum.EcLevel.html' title='qrcode::types::EcLevel'>EcLevel</a>) -&gt; <a class='type' href='../qrcode/types/type.QrResult.html' title='qrcode::types::QrResult'>QrResult</a>&lt;<a class='struct' href='../qrcode/struct.QrCode.html' title='qrcode::QrCode'>QrCode</a>&gt;</code></h4>
 <div class='docblock'><p>Constructs a new QR code for the given version and error correction
 level.</p>
-<pre class='rust rust-example-rendered'>
+<pre id='rust-example-rendered' class='rust '>
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::{<span class='ident'>QrCode</span>, <span class='ident'>Version</span>, <span class='ident'>EcLevel</span>};
 
 <span class='kw'>let</span> <span class='ident'>code</span> <span class='op'>=</span> <span class='ident'>QrCode</span>::<span class='ident'>with_version</span>(<span class='string'>b&quot;Some data&quot;</span>, <span class='ident'>Version</span>::<span class='ident'>Normal</span>(<span class='number'>5</span>), <span class='ident'>EcLevel</span>::<span class='ident'>M</span>).<span class='ident'>unwrap</span>();
 </pre>
 
 <p>This method can also be used to generate Micro QR code.</p>
-<pre class='rust rust-example-rendered'>
+<pre id='rust-example-rendered' class='rust '>
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::{<span class='ident'>QrCode</span>, <span class='ident'>Version</span>, <span class='ident'>EcLevel</span>};
 
 <span class='kw'>let</span> <span class='ident'>micro_code</span> <span class='op'>=</span> <span class='ident'>QrCode</span>::<span class='ident'>with_version</span>(<span class='string'>b&quot;123&quot;</span>, <span class='ident'>Version</span>::<span class='ident'>Micro</span>(<span class='number'>1</span>), <span class='ident'>EcLevel</span>::<span class='ident'>L</span>).<span class='ident'>unwrap</span>();
@@ -97,7 +97,7 @@ raw bits before encoding. Some examples are:</p>
 </ul>
 
 <p>See the <code>Bits</code> structure for detail.</p>
-<pre class='rust rust-example-rendered'>
+<pre id='rust-example-rendered' class='rust '>
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>allow</span>(<span class='ident'>unused_must_use</span>)]</span>
 
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::{<span class='ident'>QrCode</span>, <span class='ident'>Version</span>, <span class='ident'>EcLevel</span>};
