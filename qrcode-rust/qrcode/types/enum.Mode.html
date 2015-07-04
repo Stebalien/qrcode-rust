@@ -45,7 +45,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-1544' class='srclink' href='../../src/qrcode/types.rs.html#146-159' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-1702' class='srclink' href='../../src/qrcode/types.rs.html#146-159' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum Mode {
     Numeric,
     Alphanumeric,
@@ -60,7 +60,7 @@ punctuations marks (space, <code>$</code>, <code>%</code>, <code>*</code>, <code
 </div></td></tr><tr><td id='variant.Kanji'><code>Kanji</code></td><td><div class='docblock'><p>The data contains Shift-JIS-encoded double-byte text.</p>
 </div></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='enum' href='../../qrcode/types/enum.Mode.html' title='qrcode::types::Mode'>Mode</a></code></h3><div class='impl-items'><h4 id='method.length_bits_count' class='method'><code>fn <a href='#method.length_bits_count' class='fnname'>length_bits_count</a>(&amp;self, version: <a class='enum' href='../../qrcode/types/enum.Version.html' title='qrcode::types::Version'>Version</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></h4>
 <div class='docblock'><p>Computes the number of bits needed to encode the data length.</p>
-<pre id='rust-example-rendered' class='rust '>
+<pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::<span class='ident'>types</span>::{<span class='ident'>Version</span>, <span class='ident'>Mode</span>};
 
 <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>Mode</span>::<span class='ident'>Numeric</span>.<span class='ident'>length_bits_count</span>(<span class='ident'>Version</span>::<span class='ident'>Normal</span>(<span class='number'>1</span>)), <span class='number'>10</span>);
@@ -70,7 +70,7 @@ punctuations marks (space, <code>$</code>, <code>%</code>, <code>*</code>, <code
 mode is not supported in the given version.</p>
 </div><h4 id='method.data_bits_count' class='method'><code>fn <a href='#method.data_bits_count' class='fnname'>data_bits_count</a>(&amp;self, raw_data_len: <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></h4>
 <div class='docblock'><p>Computes the number of bits needed to some data of a given raw length.</p>
-<pre id='rust-example-rendered' class='rust '>
+<pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::<span class='ident'>types</span>::<span class='ident'>Mode</span>;
 
 <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>Mode</span>::<span class='ident'>Numeric</span>.<span class='ident'>data_bits_count</span>(<span class='number'>7</span>), <span class='number'>24</span>);
@@ -80,7 +80,7 @@ mode is not supported in the given version.</p>
 i.e. half the total size of bytes.</p>
 </div><h4 id='method.max' class='method'><code>fn <a href='#method.max' class='fnname'>max</a>(&amp;self, other: <a class='enum' href='../../qrcode/types/enum.Mode.html' title='qrcode::types::Mode'>Mode</a>) -&gt; <a class='enum' href='../../qrcode/types/enum.Mode.html' title='qrcode::types::Mode'>Mode</a></code></h4>
 <div class='docblock'><p>Find the lowest common mode which both modes are compatible with.</p>
-<pre id='rust-example-rendered' class='rust '>
+<pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::<span class='ident'>types</span>::<span class='ident'>Mode</span>;
 
 <span class='kw'>let</span> <span class='ident'>a</span> <span class='op'>=</span> <span class='ident'>Mode</span>::<span class='ident'>Numeric</span>;
