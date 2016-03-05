@@ -46,7 +46,7 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-1104' class='srclink' href='../src/qrcode/src/lib.rs.html#39-44' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-1104' class='srclink' href='../src/qrcode/lib.rs.html#39-44' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct QrCode {
     // some fields omitted
 }</pre><div class='docblock'><p>The encoded QR code symbol.</p>
@@ -55,7 +55,6 @@
 
 <p>This method uses the &quot;medium&quot; error correction level and automatically
 chooses the smallest QR code.</p>
-
 <pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::<span class='ident'>QrCode</span>;
 
@@ -65,7 +64,6 @@ chooses the smallest QR code.</p>
 specific error correction level.</p>
 
 <p>This method automatically chooses the smallest QR code.</p>
-
 <pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::{<span class='ident'>QrCode</span>, <span class='ident'>EcLevel</span>};
 
@@ -73,14 +71,12 @@ specific error correction level.</p>
 </div><h4 id='method.with_version' class='method'><code>fn <a href='#method.with_version' class='fnname'>with_version</a>(data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>, version: <a class='enum' href='../qrcode/types/enum.Version.html' title='qrcode::types::Version'>Version</a>, ec_level: <a class='enum' href='../qrcode/types/enum.EcLevel.html' title='qrcode::types::EcLevel'>EcLevel</a>) -&gt; <a class='type' href='../qrcode/types/type.QrResult.html' title='qrcode::types::QrResult'>QrResult</a>&lt;<a class='struct' href='../qrcode/struct.QrCode.html' title='qrcode::QrCode'>QrCode</a>&gt;</code></h4>
 <div class='docblock'><p>Constructs a new QR code for the given version and error correction
 level.</p>
-
 <pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::{<span class='ident'>QrCode</span>, <span class='ident'>Version</span>, <span class='ident'>EcLevel</span>};
 
 <span class='kw'>let</span> <span class='ident'>code</span> <span class='op'>=</span> <span class='ident'>QrCode</span>::<span class='ident'>with_version</span>(<span class='string'>b&quot;Some data&quot;</span>, <span class='ident'>Version</span>::<span class='ident'>Normal</span>(<span class='number'>5</span>), <span class='ident'>EcLevel</span>::<span class='ident'>M</span>).<span class='ident'>unwrap</span>();</pre>
 
 <p>This method can also be used to generate Micro QR code.</p>
-
 <pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::{<span class='ident'>QrCode</span>, <span class='ident'>Version</span>, <span class='ident'>EcLevel</span>};
 
@@ -98,7 +94,6 @@ raw bits before encoding. Some examples are:</p>
 </ul>
 
 <p>See the <code>Bits</code> structure for detail.</p>
-
 <pre class='rust rust-example-rendered'>
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>allow</span>(<span class='ident'>unused_must_use</span>)]</span>
 
@@ -134,10 +129,10 @@ color of the module, with &quot;true&quot; means dark and &quot;false&quot; mean
 </div><h4 id='method.into_vec' class='method'><code>fn <a href='#method.into_vec' class='fnname'>into_vec</a>(self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>&gt;</code></h4>
 <div class='docblock'><p>Converts the QR code to a vector of booleans. Each entry represents the
 color of the module, with &quot;true&quot; means dark and &quot;false&quot; means light.</p>
-</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Index.html' title='core::ops::Index'>Index</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt; for <a class='struct' href='../qrcode/struct.QrCode.html' title='qrcode::QrCode'>QrCode</a></code></h3><div class='impl-items'><h4 id='associatedtype.Output' class='type'><code>type Output = <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
-<h4 id='method.index' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Index.html#method.index' class='fnname'>index</a>(&amp;self, (x, y): <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>) -&gt; &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Index.html' title='core::ops::Index'>Index</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>)</a>&gt; for <a class='struct' href='../qrcode/struct.QrCode.html' title='qrcode::QrCode'>QrCode</a></code></h3><div class='impl-items'><h4 id='assoc_type.Output' class='type'><code>type Output = <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<h4 id='method.index' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Index.html#method.index' class='fnname'>index</a>(&amp;self, (x, y): <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>)</a>) -&gt; &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
 </div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../qrcode/struct.QrCode.html' title='qrcode::QrCode'>QrCode</a></code></h3><div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../qrcode/struct.QrCode.html' title='qrcode::QrCode'>QrCode</a></code></h4>
-<h4 id='method.clone_from' class='method'><span class="since">1.0.0</span><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
+<h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code></h4>
 </div></section>
     <section id='search' class="content hidden"></section>
 
@@ -181,7 +176,7 @@ color of the module, with &quot;true&quot; means dark and &quot;false&quot; mean
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                    <code>vec -> usize</code>)
                 </p>
             </div>
         </div>

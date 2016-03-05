@@ -46,9 +46,8 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-672' class='srclink' href='../../src/qrcode/src/canvas.rs.html#1-1882' title='goto source code'>[src]</a></span></h1>
+        </span><a id='src-672' class='srclink' href='../../src/qrcode/canvas.rs.html#1-1882' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>The <code>canvas</code> module puts raw bits into the QR code canvas.</p>
-
 <pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::<span class='ident'>types</span>::{<span class='ident'>Version</span>, <span class='ident'>EcLevel</span>};
 <span class='kw'>use</span> <span class='ident'>qrcode</span>::<span class='ident'>canvas</span>::{<span class='ident'>Canvas</span>, <span class='ident'>MaskPattern</span>};
@@ -66,6 +65,7 @@
                         <td class='docblock short'>
                              <p><code>Canvas</code> is an intermediate helper structure to render error-corrected data
 into a QR code.</p>
+
                         </td>
                     </tr>
                 </table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
@@ -76,6 +76,7 @@ into a QR code.</p>
                         <td class='docblock short'>
                              <p>The mask patterns. Since QR code and Micro QR code do not use the same
 pattern number, we name them according to their shape instead of the number.</p>
+
                         </td>
                     </tr>
                 
@@ -84,6 +85,7 @@ pattern number, we name them according to their shape instead of the number.</p>
                                title='qrcode::canvas::Module'>Module</a></td>
                         <td class='docblock short'>
                              <p>The color of a module (pixel) in the QR code.</p>
+
                         </td>
                     </tr>
                 </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
@@ -94,6 +96,7 @@ pattern number, we name them according to their shape instead of the number.</p>
                         <td class='docblock short'>
                              <p>Gets whether the module at the given coordinates represents a functional
 module.</p>
+
                         </td>
                     </tr>
                 </table></section>
@@ -139,7 +142,7 @@ module.</p>
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                    <code>vec -> usize</code>)
                 </p>
             </div>
         </div>
